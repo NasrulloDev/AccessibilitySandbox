@@ -25,32 +25,36 @@ struct ContentView: View {
 //    @State private var selectedPicture = Int.random(in: 0...3)
     
     var body: some View {
-        @State var value = 10
-        
-        VStack {
-            Text("Value: \(value)")
-
-            Button("Increment") {
-                value += 1
-            }
-
-            Button("Decrement") {
-                value -= 1
-            }
+        Button("John Fitzgerald Kennedy") {
+            print("Button tapped")
         }
-        .accessibilityElement()
-        .accessibilityLabel("Value")
-        .accessibilityValue(String(value))
-        .accessibilityAdjustableAction { direction in
-            switch direction {
-            case .increment:
-                value += 1
-            case .decrement:
-                value -= 1
-            default:
-                print("Not handled.")
-            }
-        }
+        .accessibilityInputLabels(["John Fitzgerald Kennedy", "Kennedy", "JFK"])
+//        @State var value = 10
+//        
+//        VStack {
+//            Text("Value: \(value)")
+//
+//            Button("Increment") {
+//                value += 1
+//            }
+//
+//            Button("Decrement") {
+//                value -= 1
+//            }
+//        }
+//        .accessibilityElement()
+//        .accessibilityLabel("Value")
+//        .accessibilityValue(String(value))
+//        .accessibilityAdjustableAction { direction in
+//            switch direction {
+//            case .increment:
+//                value += 1
+//            case .decrement:
+//                value -= 1
+//            default:
+//                print("Not handled.")
+//            }
+//        }
         
 //        VStack{
 //            Text("Your score is")
